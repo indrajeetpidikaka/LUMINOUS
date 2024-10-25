@@ -6,7 +6,7 @@ function Home() {
   const navigate = useNavigate();
   
   const [password, setPassword] = useState('');
-  const [passwordStrength, setPasswordStrength] = useState(0); // 0 - 100 scale for strength
+  const [passwordStrength, setPasswordStrength] = useState(0);
   const [isValidPassword, setIsValidPassword] = useState(false);
 
   // Function to validate password and update strength
@@ -16,7 +16,6 @@ function Home() {
     const numberCriteria = /\d/.test(password);
     const specialCharacterCriteria = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-    // Calculate strength percentage
     let strength = 0;
     if (lengthCriteria) strength += 25;
     if (uppercaseCriteria) strength += 25;
@@ -81,12 +80,31 @@ function Home() {
             borderRadius: '5px'
           }} />
       </div>
-      
+
+      {/* Password Requirements */}
+      <Typography variant="body2" style={{ marginBottom: '10px', color: '#666' }}>
+        Password must be:
+      </Typography>
+      <ul style={{ listStyleType: 'none', paddingLeft: '0', marginBottom: '20px' }}>
+        <li style={{ color: password.length >= 8 ? '#4caf50' : '#f44336' }}>
+          • At least 8 characters long
+        </li>
+        <li style={{ color: /[A-Z]/.test(password) ? '#4caf50' : '#f44336' }}>
+          • At least one uppercase letter
+        </li>
+        <li style={{ color: /\d/.test(password) ? '#4caf50' : '#f44336' }}>
+          • At least one number
+        </li>
+        <li style={{ color: /[!@#$%^&*(),.?":{}|<>]/.test(password) ? '#4caf50' : '#f44336' }}>
+          • At least one special character
+        </li>
+      </ul>
+
       <Button
         variant="contained"
         color="primary"
         onClick={() => navigate('/dashboard')}
-        disabled={!isValidPassword} // Disable button if password is not valid
+        disabled={!isValidPassword}
         style={{
           backgroundColor: '#0ea5e9',
           color: '#fff',
