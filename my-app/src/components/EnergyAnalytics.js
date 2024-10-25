@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js';
 import { Card, CardContent, Typography, CircularProgress } from '@mui/material';
+import { lightGreen } from '@mui/material/colors';
 
 // Register the required components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
@@ -54,7 +55,7 @@ function EnergyAnalytics() {
   return (
     <Card variant="outlined" style={{ marginBottom: '20px' }}>
       <CardContent>
-        <Typography variant="h5" style={{ fontWeight: 'bolder', fontFamily: 'serif', textAlign: 'center', textTransform: 'uppercase' }}>
+        <Typography variant="h5" style={{ fontWeight: 'bolder', fontFamily: 'serif', textAlign: 'center', textTransform: 'uppercase', backgroundColor: 'lightgreen'}}>
           Energy Consumption Analytics
         </Typography>
         

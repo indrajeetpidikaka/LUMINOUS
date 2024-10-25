@@ -1,1 +1,1 @@
-"# Lumi" 
+"npm start" 

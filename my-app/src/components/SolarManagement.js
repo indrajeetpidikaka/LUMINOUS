@@ -44,7 +44,7 @@ function SolarManagement() {
   return (
     <Card variant="outlined" style={{ marginBottom: '20px', borderRadius: '8px' }}>
       <CardContent>
-        <Typography variant="h5" style={{ marginBottom: '20px', textAlign: 'center',fontFamily: 'serif', fontWeight: 'bolder', textTransform: 'uppercase' }}>
+        <Typography variant="h5" style={{ marginBottom: '20px', textAlign: 'center',fontFamily: 'serif', fontWeight: 'bolder', textTransform: 'uppercase',backgroundColor: 'lightgreen' }}>
           Solar Energy Management
         </Typography>
         

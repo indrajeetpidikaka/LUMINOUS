@@ -46,7 +46,7 @@ function EnergyAnalytics() {
   return (
     <Card variant="outlined" style={{ marginBottom: '20px' }}>
       <CardContent>
-        <Typography variant="h5" style={{ fontWeight: 'bolder', fontFamily: 'serif', textAlign: 'center', textTransform: 'uppercase' }}>
+        <Typography variant="h5" style={{ fontWeight: 'bolder', fontFamily: 'serif', textAlign: 'center', textTransform: 'uppercase', backgroundColor: 'lightgreen',}}>
           Energy Consumption Analytics
         </Typography>
         

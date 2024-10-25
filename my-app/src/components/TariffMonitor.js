@@ -10,6 +10,7 @@ import {
   FormControl,
   InputLabel,
 } from '@mui/material';
+import { green } from '@mui/material/colors';
 
 // Expanded dummy tariff data
 const initialTariffs = [
@@ -79,7 +80,7 @@ function TariffMonitor() {
     return (
         <Card variant="outlined" style={{ marginBottom:'20px' , borderRadius:'8px'}}>
             <CardContent>
-                <Typography variant="h5" style={{ marginBottom:'20px' , textAlign:'center' , fontWeight:'bolder' , fontFamily :'serif' , textTransform :'uppercase'}}>
+                <Typography variant="h5" style={{ marginBottom:'20px' , textAlign:'center' , fontWeight:'bolder' , fontFamily :'serif' , textTransform :'uppercase', backgroundColor: 'lightgreen'}}>
                     Real-Time Tariff Monitoring
                 </Typography>
 
